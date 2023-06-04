@@ -38,8 +38,8 @@ function App() {
   
     <div className="App">
       <h2>My tasks</h2>
-      <CategoryFilter categoryList = {CATEGORIES} onCategoryChange={handleCategoryChange} />
-      <NewTaskForm categoryList = {CATEGORIES} onTaskFormSubmit = {handleNewTask} />
+      <CategoryFilter categories = {CATEGORIES} onCategoryChange={handleCategoryChange} />
+      <NewTaskForm categories = {CATEGORIES} onTaskFormSubmit = {handleNewTask} />
       <TaskList tasks= {tasks.filter((task) => ((task.category === selectedCategory) || (selectedCategory === "All" )) )} onTaskDelete= {handleDeletedTasks} /> 
 
     </div>
